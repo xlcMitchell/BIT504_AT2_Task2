@@ -35,8 +35,8 @@ public class Board {
 		// Hint: Return false if it is not a draw, return true if there are no empty positions left
 		for(int row=0; row < GameMain.ROWS; row++) {
 			for(int col = 0; col < GameMain.COLS; col++) {
-				if(cells[row][col].content == Player.Empty) {}
-				return false;
+				if(cells[row][col].content == Player.Empty) {return false;}
+				
 			}
 		}
 		

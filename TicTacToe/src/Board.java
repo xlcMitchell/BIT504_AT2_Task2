@@ -16,7 +16,7 @@ public class Board {
 	 //TODO: initialise the cells array using ROWS and COLS constants 
         cells = new Cell [GameMain.ROWS] [GameMain.COLS];   
        
-		
+	
 		for (int row = 0; row < GameMain.ROWS; ++row) {
 			for (int col = 0; col < GameMain.COLS; ++col) {
 				
@@ -35,13 +35,13 @@ public class Board {
 		// Hint: Return false if it is not a draw, return true if there are no empty positions left
 		for(int row=0; row < GameMain.ROWS; row++) {
 			for(int col = 0; col < GameMain.COLS; col++) {
-				if(cells[row][col].content != Player.Empty) {}
-				return true;
+				if(cells[row][col].content == Player.Empty) {}
+				return false;
 			}
 		}
 		
 		   
-		return false;
+		return true;
 
 		
 	}
@@ -80,6 +80,7 @@ public class Board {
 	public void paint(Graphics g) {
 		//draw the grid
 		g.setColor(Color.GRAY);
+		
 		for (int row = 1; row < GameMain.ROWS; ++row) {          
 			g.fillRoundRect(0, GameMain.CELL_SIZE * row - GRID_WIDHT_HALF,                
 					GameMain.CANVAS_WIDTH - 1, GRID_WIDTH,                
@@ -94,7 +95,10 @@ public class Board {
 		//Draw the cells
 		for (int row = 0; row < GameMain.ROWS; ++row) {          
 			for (int col = 0; col < GameMain.COLS; ++col) {  
+				
 				cells[row][col].paint(g);
+				
+				
 			}
 		}
 	}

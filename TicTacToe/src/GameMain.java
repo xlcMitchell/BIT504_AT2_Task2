@@ -64,8 +64,8 @@ public class GameMain extends JPanel implements MouseListener{
 		
 		//TODO: call the method to initialise the game board
 		
+		initGame();
 		
-
 	}
 	
 	public static void main(String[] args) {
@@ -106,13 +106,17 @@ public class GameMain extends JPanel implements MouseListener{
 			if (currentPlayer == Player.Cross) {   
 			
 				//TODO: use the status bar to display the message "X"'s Turn
-				g.drawString("X's Turn", CANVAS_HEIGHT, SYMBOL_SIZE);
+				String str = "X's Turn";
+				int width = g.getFontMetrics().stringWidth(str);
+				g.setColor(Color.BLACK);
+				g.drawString(str,150, 290);
+				System.out.println(getHeight());
 
 				
 			} else {    
 				
 				//TODO: use the status bar to display the message "O"'s Turn
-				g.drawString("O's Turn", CANVAS_HEIGHT, SYMBOL_SIZE);
+				g.drawString("O's Turn", 100, 100);
 
 				
 			}       

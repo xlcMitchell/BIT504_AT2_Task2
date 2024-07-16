@@ -17,7 +17,7 @@ public class Cell {
           this.col = col;
 		
 		
-		//TODO: call the method that sets the cell content to EMPTY
+		//tHE CLEAR METHOD RESETS TO CELLS TO EMPTY
 		 clear();
 	}
 	

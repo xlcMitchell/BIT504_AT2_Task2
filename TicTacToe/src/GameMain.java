@@ -41,6 +41,7 @@ public class GameMain extends JPanel implements MouseListener{
 		
 		// TODO: This JPanel fires a MouseEvent on MouseClicked so add required event listener to 'this'.          
 		addMouseListener(this);
+		
 	    
 		// Setup the status bar (JLabel) to display status message       
 		statusBar = new JLabel("         ");       
@@ -78,8 +79,11 @@ public class GameMain extends JPanel implements MouseListener{
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
 				
-				//TODO: create the new GameMain panel and add it to the frame
+				
+				//creating a new instance of the GameMain panel
 				GameMain game = new GameMain();
+				
+				//adding it to the JPanel frame
 				
 				frame.add(game);
 				
@@ -112,15 +116,15 @@ public class GameMain extends JPanel implements MouseListener{
 			
 			if (currentPlayer == Player.Cross) {   
 			
-				//TODO: use the status bar to display the message "X"'s Turn
-				statusBar.setText("         X's Turn   ");
+				//updating the text of the status bar when it is x's turn
+				statusBar.setText("              X's Turn   ");
 				
 
 				
 			} else {    
 				
-				//TODO: use the status bar to display the message "O"'s Turn
-				statusBar.setText("        O's Turn    ");
+				//updating the text content of the status bar when it is noughts turn
+				statusBar.setText("              O's Turn    ");
 
 				
 			}       
@@ -215,7 +219,8 @@ public class GameMain extends JPanel implements MouseListener{
 			initGame();            
 		}   
 		
-		//TODO: redraw the graphics on the UI
+		
+		//repaint method called to redraw the graphics after that user has selected a cell.
 		repaint();
         System.out.println(currentState);
         
